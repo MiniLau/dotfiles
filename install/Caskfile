@@ -1,0 +1,14 @@
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+
+cask "google-chrome"
+cask "firefox"
+
+cask "iterm2"
+cask "spotify"
+cask "atom"
+cask "slack"
+
+cask "flash-npapi"
