@@ -1,0 +1,36 @@
+# Shortcuts
+
+alias reload="source ~/.bash_profile"
+alias g="git"
+alias rr="rm -rf"
+
+# Directory listing/traversal
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+alias tree="tree -A"
+alias treed="tree -d"
+alias tree1="tree -d -L 1"
+alias tree2="tree -d -L 2"
+
+# npm
+
+alias ni="npm install"
+alias nu="npm uninstall"
+alias nup="npm update"
+
+# Network
+
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ipl="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+
+# Miscellaneous
+
+alias quit="exit"
+alias week="date +%V"
+alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
+
+# Brew
+alias brewup = "brew update; brew upgrade; brew prune; brew cleanup; brew doctor;"
