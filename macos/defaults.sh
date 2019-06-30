@@ -39,9 +39,6 @@ defaults write com.apple.sound.beep.feedback -bool false
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-# Menu bar: disable transparency
-defaults write com.apple.universalaccess reduceTransparency -bool true
-
 # Menu bar: show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent YES
 
@@ -50,6 +47,9 @@ defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool true
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# Always Show the Expanded Print Dialog by Default
+defaults write -g PMPrintingExpandedStateForPrint -bool true
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
@@ -62,6 +62,12 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
+
+# Get Rid of the Dashboard
+defaults write com.apple.dashboard mcx-disabled -boolean yes
+
+# Show System Info on the Login Screen
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 ###############################################################################
 # Keyboard & Input                                                            #
@@ -91,8 +97,11 @@ defaults write com.apple.BezelServices kDimTime -int 300
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-# Follow the keyboard focus while zoomed in
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+# Enable Key Repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+# Sets a very fast repeat rate
+defaults write -g KeyRepeat -int 0.02
 
 ###############################################################################
 # Trackpad, mouse, Bluetooth accessories                                      #
@@ -117,10 +126,6 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-
-# Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
 ###############################################################################
 # Screen                                                                      #
@@ -210,9 +215,6 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict General -bool true Ope
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
-# Make Dock icons of hidden applications translucent
-defaults write com.apple.dock showhidden -bool true
-
 # No bouncing icons
 defaults write com.apple.dock no-bouncing -bool true
 
@@ -247,6 +249,9 @@ defaults write com.apple.mail PollTime -string "-1"
 
 # Show most recent message at the top in conversations
 defaults write com.apple.mail ConversationViewSortDescending -bool true
+
+# Show Attachments as Icons
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
 
 ###############################################################################
 # Calendar                                                                    #
