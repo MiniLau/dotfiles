@@ -9,9 +9,8 @@ brew "python"
 brew "pipenv"
 brew "node"
 
+brew "zsh"
 brew "grep"
 brew "tree"
 brew "wget"
-
-brew "vim"
-
+brew "dockutil"

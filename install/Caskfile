@@ -6,7 +6,6 @@ tap "homebrew/cask-versions"
 cask "google-chrome"
 cask "firefox"
 
-cask "iterm2"
 cask "spotify"
 cask "atom"
 cask "slack"
