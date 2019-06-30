@@ -1,0 +1,15 @@
+[user]
+    name = MiniLau
+    email = laurent@desausoi.net
+[github]
+    user = MiniLau
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[alias]
+    a = add
+    c = commit
+    s = status
+[credential]
+    helper = store
