@@ -101,7 +101,8 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Sets a very fast repeat rate
-defaults write -g KeyRepeat -int 0.02
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 ###############################################################################
 # Trackpad, mouse, Bluetooth accessories                                      #
