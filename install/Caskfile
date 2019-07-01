@@ -9,5 +9,6 @@ cask "firefox"
 cask "spotify"
 cask "atom"
 cask "slack"
+cask "microsoft-office"
 
 cask "flash-npapi"
