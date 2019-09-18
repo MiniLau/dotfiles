@@ -21,3 +21,10 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 alias displays="system_profiler SPDisplaysDataType"
 alias cpu="sysctl -n machdep.cpu.brand_string"
+
+
+# Brew
+alias brewup="brew update; brew upgrade; brew cleanup; brew doctor;"
+
+# Network
+alias iph="netstat -nr | grep default | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"

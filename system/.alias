@@ -31,6 +31,3 @@ alias ipl="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([
 alias quit="exit"
 alias week="date +%V"
 alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
-
-# Brew
-alias brewup="brew update; brew upgrade; brew cleanup; brew doctor;"
