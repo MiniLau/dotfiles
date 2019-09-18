@@ -102,7 +102,7 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Sets a very fast repeat rate
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+defaults write -g KeyRepeat -int 2 # normal minimum is 2 (30 ms)
 
 ###############################################################################
 # Trackpad, mouse, Bluetooth accessories                                      #
@@ -322,4 +322,3 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal"; do
   killall "${app}" &> /dev/null
 done
-
