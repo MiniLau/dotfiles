@@ -1,5 +1,5 @@
 #!/bin/bash
-DOTFILES_DIR="/$HOME/.dotfiles"
+DOTFILES_DIR="$HOME/.dotfiles"
 
 # Installing Brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -17,5 +17,11 @@ ln -svf $DOTFILES_DIR/runcom/.bash_profile ~/.bash_profile
 ln -svf $DOTFILES_DIR/runcom/.zshrc ~/.zshrc
 ln -svf $DOTFILES_DIR/runcom/.inputrc ~/.inputrc
 
+# Set up MAC specificities
 source $DOTFILES_DIR/macos/defaults.sh
 source $DOTFILES_DIR/macos/dock.sh
+source $DOTFILES_DIR/macos/desktop.sh
+
+# Background and ScreenSaver image
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "'$DOTFILES_DIR'/desktop/background.jpg"'
+open $DOTFILES_DIR/desktop/Web.saver
