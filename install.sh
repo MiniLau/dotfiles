@@ -21,7 +21,3 @@ ln -svf $DOTFILES_DIR/runcom/.inputrc ~/.inputrc
 source $DOTFILES_DIR/macos/defaults.sh
 source $DOTFILES_DIR/macos/dock.sh
 source $DOTFILES_DIR/macos/desktop.sh
-
-# Background and ScreenSaver image
-osascript -e 'tell application "Finder" to set desktop picture to POSIX file "'$DOTFILES_DIR'/desktop/background.jpg"'
-open $DOTFILES_DIR/desktop/Web.saver
