@@ -8,6 +8,7 @@ brew "python@2"
 brew "python"
 brew "pipenv"
 brew "node"
+brew "tmux"
 
 brew "zsh"
 brew "grep"

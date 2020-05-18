@@ -8,7 +8,12 @@ cask "firefox"
 
 cask "spotify"
 cask "atom"
-cask "slack"
-cask "microsoft-office"
+cask "evernote"
+cask "microsoft-excel"
+cask "microsoft-powerpoint"
 
-cask "flash-npapi"
+cask "virtualbox"
+cask "arduino"
+
+cask "balenaetcher"
+cask "logitech-options"
