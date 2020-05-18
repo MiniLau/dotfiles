@@ -1,0 +1,8 @@
+# Once a day cleanup all caches on the computer
+@daily /usr/local/bin/cleanup
+
+# Once a week update brew and mas
+BREW=/usr/local/bin/brew
+MAS=/usr/local/bin/mas
+@weekly bash -ic "$BREW update; $BREW upgrade; $BREW cask upgrade; $BREW cleanup; $BREW doctor;"
+@weekly bash -ic "$MAS upgrade"
